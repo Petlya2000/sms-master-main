@@ -1,0 +1,26 @@
+app:
+  namespace: "Carterline42"
+
+  settings:
+    controllersDir: "controllers/"
+    requestsLimit: # query limits per method
+      count: 10
+      time: 60 # seconds
+    fail2ban: # jailing user ip if max auth attempts reached
+      count: 10
+      time: 60 # auth queries per range of seconds
+      jailedUntil: 3600 # seconds
+
+  routes:
+    account:
+      controller: "Account"
+      unprotectedMethods:
+        - "auth"
+        - "register"
+        - "inviteCodeValid"
+    distribution:
+      controller: "Distribution"
+    database:
+      controller: "Database"
+    advices:
+      controller: "Advices"

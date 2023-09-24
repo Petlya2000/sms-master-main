@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="dashboard/style.css">
+	<link rel="stylesheet" type="text/css" href="dashboard/libs/timepicker.css">
+	<script type="text/javascript" src="dashboard/libs/timepicker.js"></script>
+	<script type="text/javascript" src="dashboard/libs/sha256.js"></script>
+</head>
+<body>
+<!-- 	<div class="modalform">
+		<div class="header">Авторизация</div>
+		<div class="body">
+			<label for="login">логин <span style="color: red;">*</span></label>
+			<input type="text" placeholder="Логин" name="login">
+			<div class="margin10"></div>
+			<label for="password">пароль <span style="color: red;">*</span></label>
+			<input type="password" placeholder="Пароль" name="password">
+			
+		</div>
+		<div class="footer">
+			<div class="button">Войти</div>
+		</div>
+	</div> -->
+
+
+
+<!-- 	<div class="modalform">
+		<div class="header">Регистрация нового пользователя</div>
+		<div class="body">
+		<div class="userInfoFields">
+			<div class="info">
+				<label for="lastname">фамилия <span style="color: red;">*</span></label>
+				<input type="text" placeholder="Фамилия" name="lastname">
+				<div class="margin10"></div>
+				<label for="firstname">имя <span style="color: red;">*</span></label>
+				<input type="text" placeholder="Имя" name="firstname">
+				<div class="margin10"></div>
+				<label for="password">отчество</label>
+				<input type="text" placeholder="Пароль" name="password">
+			</div>
+			<div class="verticalLine"></div>
+			<div class="creditinals">
+				<label for="login">логин <span style="color: red;">*</span></label>
+				<input type="text" placeholder="Логин" name="login">
+				<div class="margin10"></div>
+				<label for="password">пароль <span style="color: red;">*</span></label>
+				<input type="password" placeholder="Пароль" name="password">
+				<div class="margin10"></div>
+				<label for="password_double">повторите пароль <span style="color: red;">*</span></label>
+				<input type="password" placeholder="Повторите пароль" name="password_double">
+			</div>
+		</div>	
+		</div>
+		<div class="footer">
+			<div class="button">Регистрация</div>
+		</div>
+	</div> -->
+
+
+<!-- <div class="workflow">
+	<div class="navigationPanel">
+		<div class="header">
+			Logged as 
+			<span style="font-weight: 700">Admin</span>
+			<br>
+			<span style="opacity: 0.8; font-size: 14px;">Иванов Иван Иванович</span>
+		</div>
+		<div class="navigationItems">
+			<div class="navigationItem" inactive>
+				<img src="icons/statistic.svg" alt="">
+				<p>Статистика</p>
+			</div>
+			<div class="navigationItem">
+				<img src="icons/distribution.svg" alt="">
+				<p>Рассылка</p>
+			</div>
+			<div class="navigationItem">
+				<img src="icons/database.svg" alt="">
+				<p>База данных</p>
+			</div>
+			<div class="navigationItem" inactive>
+				<img src="icons/blacklist.svg" alt="">
+				<p>Чёрный список</p>
+			</div>
+		</div>
+		<div class="navigationItem" id="logoutButton">
+			<img src="icons/logout.svg" alt="">
+			<p>Выйти</p>
+		</div>
+
+	</div>
+	<div class="pageflow" id="pageflow">
+		<div class="pageHeader" id="pageHeader">База данных</div>
+		<div class="pageContent">
+				<div class="widgetArea">
+					
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	
+<!-- 	<div class="blackout"></div>
+	<div class="errorModal">
+		<div class="innerWrapper">
+			<p>Неизвестная ошибка</p>
+			<p><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<div style="display: flex; justify-content: flex-end; margin-right: 10px;">
+				<div class="inlineButton red">Перезагрузить</div>
+			</div>
+		</div>
+	</div> -->
+
+
+<!-- 	<div class="blackout"></div>
+	<div class="errorModal">
+		<div class="innerWrapper">
+			<p>Выйти из аккаунта?</p>
+			<p>Вы <b>уверены</b> что хотите выйти из аккаунта?</p>
+			<div style="display: flex; justify-content: flex-end; margin-right: 10px;">
+				<div class="inlineButton blue">Отмена</div>
+				<div class="inlineButton red">Выйти</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+		<!-- <div class="widgetArea">
+				<p class="widgetAreaLabel">Рассылка в реальном времени</p>
+				<div class="widgetContent p50 numbersTable">
+					<div class="row header">
+						<div class="col15">Статус</div>
+						<div class="col20">Номер телефона</div>
+						<div class="col10">Совет №</div>
+						<div class="col10">Отправлено</div>
+						<div class="col10">Доставлено</div>
+						<div class="col10"></div>
+					</div>
+					<div class="horizontalLine"></div>
+					<div class="row">
+						<div class="col15 status await">Ожидание</div>
+						<div class="col20">+7 (940) 999 99-99</div>
+						<div class="col10">Н/Д</div>
+						<div class="col10">0</div>
+						<div class="col10">0</div>
+						<div class="col10 active">просмотр</div>
+					</div>
+					<div class="row">
+						<div class="col15 status sending">Отправка</div>
+						<div class="col20">+7 (940) 999 99-99</div>
+						<div class="col10">Н/Д</div>
+						<div class="col10">0</div>
+						<div class="col10">0</div>
+						<div class="col10 active">просмотр</div>
+					</div>
+					<div class="row">
+						<div class="col15 status sended">Отправлено</div>
+						<div class="col20">+7 (940) 999 99-99</div>
+						<div class="col10">Н/Д</div>
+						<div class="col10">0</div>
+						<div class="col10">0</div>
+						<div class="col10 active">просмотр</div>
+					</div>
+					<div class="row">
+						<div class="col15 status delivered minIcon">Доставлено</div>
+						<div class="col20">+7 (940) 999 99-99</div>
+						<div class="col10">Н/Д</div>
+						<div class="col10">0</div>
+						<div class="col10">0</div>
+						<div class="col10 active">просмотр</div>
+					</div>
+
+
+
+
+
+					<div class="row">
+						<div class="col15 status error">Ошибка</div>
+						<div class="col20">+7 (940) 999 99-99</div>
+						<div class="col10">Н/Д</div>
+						<div class="col10">0</div>
+						<div class="col10">0</div>
+						<div class="col10 active">просмотр</div>
+					</div>
+
+				</div> -->
+
+
+
+
+
+</body>
+<script type="text/javascript" src="dashboard/libs/crypto.js"></script>
+<script type="text/javascript" src="dashboard/libs/anime.min.js"></script>
+<script type="text/javascript" src="dashboard/libs/sha256.js"></script>
+<script type="text/javascript" src="dashboard/libs/material.js"></script>
+<script type="text/javascript" src="dashboard/libs/api.js"></script>
+<script type="text/javascript" src="dashboard/script.js"></script>
+</html>

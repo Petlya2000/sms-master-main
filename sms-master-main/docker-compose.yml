@@ -1,0 +1,65 @@
+version: '3.9'
+
+x-common-variables: &common-variables
+   MYSQL_ROOT_PASSWORD: testPassword
+   MYSQL_DATABASE: servicesms
+   JWT_SECRET: mySecret
+
+
+services:
+  mariadb:
+    image: mariadb:10.5
+    restart: always
+    container_name: smsservice-db
+    environment:
+      <<: *common-variables
+      COMPOSER_ALLOW_SUPERUSER: 1
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+    - local_network
+    
+  php:
+    build: ./php/
+    container_name: smsservice-php
+    restart: on-failure
+    stop_signal: SIGTERM
+    depends_on:
+      - mariadb
+      - redis
+    environment: *common-variables
+    volumes:
+      - ./src:/var/www/html
+    networks:
+    - local_network
+    command: sh -c 'php-fpm & ./wait-for-it.sh mariadb:3306 -- php /var/www/html/api/supervisor.php'
+
+  nginx:
+    image: nginx:stable-alpine3.17
+    container_name: smsservice-webserver
+    restart: always
+    ports:
+      - "80:80"
+    links:
+      - php
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/:/etc/nginx/conf.d/
+    networks:
+    - local_network
+
+  redis:
+      image: redis:5.0.14-bullseye
+      container_name: smsservice-redis
+      restart: always
+      ports:
+        - "6379:6379"
+      networks:
+      - local_network
+
+networks:
+  local_network:
+    driver: bridge

@@ -1,0 +1,14 @@
+{
+    "require": {
+        "predis/predis": "^2.1",
+        "firebase/php-jwt": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Carterline42\\Generic\\": "generic/",
+            "Carterline42\\Generic\\Interfaces\\": "generic/interfaces/",
+            "Carterline42\\App\\": "app/",
+            "Carterline42\\Exceptions\\": "exceptions/"
+        }
+    }
+}
